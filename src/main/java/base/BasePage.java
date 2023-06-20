@@ -23,6 +23,7 @@ import org.testng.annotations.*;
 import org.testng.annotations.Optional;
 import reporting.ExtentManager;
 import reporting.ExtentTestManager;
+import utils.ExcelData;
 
 import java.io.File;
 import java.lang.reflect.Method;
@@ -38,14 +39,24 @@ public class BasePage {
     public static Wait<WebDriver> fluentWait;
     public static ExtentReports extent;
     public static JavascriptExecutor jsDriver;
+    public ExcelData excelData;
 
     // region Hooks
+
+
     @BeforeSuite(alwaysRun = true)
     public void reportSetup(ITestContext context) {
         ExtentManager.setOutputDirectory(context);
         extent = ExtentManager.getInstance();
     }
 
+
+    @BeforeMethod
+    public void initExcelData(){
+        String packagePath= System.getProperty("user.dir");
+        String dataPath= "src" + File.separator + "test" + File.separator + "resources" + File.separator + "test_data.xlsx";
+        this.excelData= new ExcelData(packagePath + File.separator + dataPath);
+    }
     @BeforeMethod(alwaysRun = true)
     public void reportInit(Method method) {
         String className = method.getDeclaringClass().getSimpleName();

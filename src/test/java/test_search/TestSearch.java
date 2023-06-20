@@ -11,7 +11,9 @@ public class TestSearch extends BasePage {
     @Test
     public void testDoSearch(){
         homepage = new Homepage();
-        String searchTerm = "women T shirts";
+        String[] searchTerms= excelData.readStringArray("testDoSearch");
+        String searchTerm = searchTerms[0];
+
         SearchResultPage searchResultPage= homepage.doSearch(searchTerm);
         Assert.assertTrue(isElementVisible(searchResultPage.textSearchTerm));
     }
