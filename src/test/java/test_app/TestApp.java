@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class TestApp extends BasePage {
 
-    @Test (priority = 0, groups = {"BAT"})
+    @Test (priority = 0, groups = {"smoke"})
     public void testNavigationToApplication() {
         Homepage homepage = new Homepage();
 

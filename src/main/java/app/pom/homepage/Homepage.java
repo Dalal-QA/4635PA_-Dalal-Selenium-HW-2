@@ -1,5 +1,6 @@
 package app.pom.homepage;
 
+import app.resultpage.SearchResultPage;
 import base.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -22,6 +23,7 @@ public class Homepage extends BasePage {
     }
 // single responsibility methods
     public void inputSearchTerm(String searchTerm){
+
         clearSendKeysToElement(inputSearchBar,searchTerm);
     }
     public void clickActionSearchButton(){
