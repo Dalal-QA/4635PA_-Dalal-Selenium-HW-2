@@ -27,6 +27,7 @@ public class Homepage extends BasePage {
         clearSendKeysToElement(inputSearchBar,searchTerm);
     }
     public void clickActionSearchButton(){
+
         safeClickOnElement(buttonActionSearch);
     }
 

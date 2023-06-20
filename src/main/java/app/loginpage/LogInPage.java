@@ -1,6 +1,5 @@
-package app.login;
+package app.loginpage;
 
-import app.resultpage.SearchResultPage;
 import base.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

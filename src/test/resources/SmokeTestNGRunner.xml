@@ -17,8 +17,10 @@
             </run>
         </groups>
         <classes>
-<!--            <class name="test_app.TestApp"/>-->
+            <class name="test_app.TestApp"/>
             <class name="test_login.TestLogin"/>
+            <class name="test_addtocart.testAddToCart"/>
+            <class name="test_search.TestSearch"/>
 
 
         </classes>

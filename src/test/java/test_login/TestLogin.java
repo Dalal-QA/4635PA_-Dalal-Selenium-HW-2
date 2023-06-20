@@ -1,14 +1,11 @@
 package test_login;
 
-import app.login.LogInPage;
-import app.login.WelcomeLoginPage;
-import app.pom.homepage.Homepage;
-import app.resultpage.SearchResultPage;
+import app.loginpage.LogInPage;
+import app.loginpage.WelcomeLoginPage;
 import base.BasePage;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import test_search.TestSearch;
 
 public class TestLogin extends BasePage {
 
