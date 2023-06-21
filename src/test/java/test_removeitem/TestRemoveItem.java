@@ -34,10 +34,18 @@ public class TestRemoveItem extends BasePage {
 //        WebElement removeIemIcon = driver.findElement(By.xpath("//a[contains(.,'Remove')]"));
 //        removeIemIcon.click();
 
-        removeItemPage.removeItemFromCart(searchTerm);
+        //removeItemPage.removeItemFromCart(searchTerm);
 
         //Assert.assertTrue(isElementVisible(driver.findElement(By.xpath("//strong[@class='subtitle empty']"))));
-
+        removeItemPage.inputSearchTerm(searchTerm);
+        removeItemPage.clickActionSearchButton();
+        removeItemPage.clickOnTheItem();
+        removeItemPage.selectAColor();
+        removeItemPage.selectYourSize();
+        removeItemPage.clickOnAddToCartButton();
+        removeItemPage.clickOnNumberOfItemInCart();
+        removeItemPage.clickOnRemoveItemIcon();
+        removeItemPage.clickOnOkRemoveItem();
 
 
 
