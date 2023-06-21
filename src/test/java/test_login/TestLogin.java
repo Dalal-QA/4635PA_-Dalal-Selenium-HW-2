@@ -1,7 +1,7 @@
 package test_login;
 
-import app.loginpage.LogInPage;
-import app.loginpage.WelcomeLoginPage;
+import loginpage.LogInPage;
+import loginpage.WelcomeLoginPage;
 import base.BasePage;
 import org.openqa.selenium.By;
 import org.testng.Assert;
@@ -18,7 +18,8 @@ public class TestLogin extends BasePage {
         String validEmail ="connie.smith@gmail.com";
         String validPassword="AydenLiam1213";
         logInPage.getLogIn(validEmail,validPassword);
-        Assert.assertTrue(isElementVisible(WelcomeLoginPage.driver.findElement(By.xpath("//div[@class='panel header']//span[@class='logged-in']"))));
+        Assert.assertTrue(isElementVisible(logInPage.resultLoginMessage));
+
     }
 
 

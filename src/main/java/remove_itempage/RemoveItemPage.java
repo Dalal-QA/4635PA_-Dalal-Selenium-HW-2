@@ -30,11 +30,11 @@ public class RemoveItemPage extends BasePage {
     @FindBy(xpath = "/html/body/div[1]/header/div[2]/div[1]/a")
     WebElement numberOfItemInCart;
 
-    @FindBy(xpath = "//a[contains(.,'Remove')]")
+    @FindBy(xpath = "//*[@id=\"mini-cart\"]/li/div/div/div[3]/div[2]/a")
     WebElement removeItemIcon;
-    @FindBy(xpath = "//span[.='OK']")
+    @FindBy(xpath = "/html/body/div[3]/aside[2]/div[2]/footer/button[2]")
     WebElement okRemoveItemButton;
-    @FindBy(xpath = "//strong[@class='subtitle empty']")
+    @FindBy(xpath = "//*[@id=\"minicart-content-wrapper\"]/div[2]/strong")
     WebElement removedItemResultText;
 
     public RemoveItemPage(){
@@ -65,6 +65,7 @@ public class RemoveItemPage extends BasePage {
 
     public void clickOnNumberOfItemInCart(){
         safeClickOnElement(numberOfItemInCart);
+
     }
 
     public void clickOnRemoveItemIcon(){
@@ -86,4 +87,6 @@ public class RemoveItemPage extends BasePage {
         clickOnOkRemoveItem();
 
     }
+
+
     }

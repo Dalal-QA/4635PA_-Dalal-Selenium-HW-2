@@ -23,7 +23,7 @@ public class testAddToCart extends BasePage {
 //        String searchItem="Pullover";
 //        addItemPage.AddItemToTheCart(searchItem);
 //
-        Assert.assertTrue(isElementVisible(AddedItemPage.driver.findElement(By.cssSelector("[data-bind='html: $parent.prepareMessageForHtml(message.text)']"))));
+        Assert.assertTrue(isElementVisible(AddedItemPage.driver.findElement(By.xpath("/html/body/div[1]/header/div[1]/div/ul/li[1]/span"))));
 
     }
 
