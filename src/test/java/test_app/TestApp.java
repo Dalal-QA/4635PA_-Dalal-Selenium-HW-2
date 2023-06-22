@@ -56,7 +56,7 @@ public class TestApp extends BasePage {
 
         String firstName= "Nancy";
         String lastName ="Blando";
-        String email="nancy.blan@gmail.com";
+        String email="nancy.blandi@gmail.com";
         String password="Liam@#Ayden125";
         String confirmPassword="Liam@#Ayden125";
         registrationPage.doRegistration(firstName,lastName,email,password);
