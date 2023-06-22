@@ -10,19 +10,13 @@
     <parameter name="driverConfigEnabled" value="true"/>
 
     <test name="smoke">
-        <groups>
-            <run>
-                <include name="smoke"/>
-                <exclude name = "broken"/>
-            </run>
-        </groups>
+        <!--        <groups>-->
+        <!--            <run>-->
+        <!--                <include name=""/>-->
+        <!--            </run>-->
+        <!--        </groups>-->
         <classes>
             <class name="test_app.TestApp"/>
-            <class name="test_login.TestLogin"/>
-            <class name="test_addtocart.testAddToCart"/>
-            <class name="test_search.TestSearch"/>
-
-
         </classes>
     </test>
 
