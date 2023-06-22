@@ -27,7 +27,7 @@ public class RemoveItemPage extends BasePage {
     @FindBy(id="product-addtocart-button")
     WebElement addToCartButton;
 
-    @FindBy(xpath = "/html/body/div[1]/header/div[2]/div[1]/a")
+    @FindBy(xpath = "//a[@class='action showcart']")
     WebElement numberOfItemInCart;
 
     @FindBy(xpath = "//*[@id=\"mini-cart\"]/li/div/div/div[3]/div[2]/a")
