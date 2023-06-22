@@ -66,7 +66,7 @@ public class TestApp extends BasePage {
 
         String firstName= "Nancy";
         String lastName ="Blando";
-        String email="nancy.blandi@gmail.com";
+        String email="nancy.blandino@gmail.com";
         String password="Liam@#Ayden125";
         String confirmPassword="Liam@#Ayden125";
         registrationPage.doRegistration(firstName,lastName,email,password);
@@ -136,7 +136,7 @@ public class TestApp extends BasePage {
     @Test(priority = 10 , groups = {"BAT"})
     public void testSubscribe(){
         Homepage homepage= new Homepage();
-        String email="connie.smith@gmail.com";
+        String email="sadouni.dalal@gmail.com";
         homepage.DoSubscribe(email);
 
 Assert.assertTrue(isElementVisible(homepage.confirmSubscriptionMessage));
