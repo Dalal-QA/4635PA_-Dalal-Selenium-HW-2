@@ -12,6 +12,9 @@ public class SearchResultPage extends BasePage {
 
     @FindBy(xpath = "//span[@class='base']")
     public WebElement textSearchTerm;
+
+    @FindBy(xpath = "//div[@class='message notice']/div[contains(.,'Your search returned no results.')]")
+    public WebElement resultInvalidSearchTerm;
     public SearchResultPage(){
         PageFactory.initElements(driver,this);
 

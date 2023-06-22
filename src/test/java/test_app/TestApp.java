@@ -48,7 +48,16 @@ public class TestApp extends BasePage {
         Assert.assertTrue(isElementVisible(searchResultPage.textSearchTerm));
     }
 
-    @Test(priority = 3, groups= {"BAT"})
+    @Test(priority = 3,groups={"BAT"})
+    public void testDoSearchWithInvalidSearchTerm() {
+
+        Homepage homepage = new Homepage();
+        String searchTerm = "@#$^";
+        SearchResultPage searchResultPage = homepage.doSearch(searchTerm);
+        Assert.assertTrue(isElementVisible(searchResultPage.resultInvalidSearchTerm));
+    }
+
+    @Test(priority = 4, groups= {"BAT"})
     public void testRegistration(){
         RegistrationPage registrationPage;
 
@@ -65,7 +74,7 @@ public class TestApp extends BasePage {
 
     }
 
-    @Test(priority = 4, groups = {"BAT"})
+    @Test(priority = 5, groups = {"BAT"})
 
     public void testLoginWithValidCredentials(){
 
@@ -77,7 +86,7 @@ public class TestApp extends BasePage {
 
     }
 
-    @Test(priority = 5, groups = {"BAT"})
+    @Test(priority = 6, groups = {"BAT"})
     public void testLoginWithInvalidCredentials(){
 
         LoginWithInvalidCredentials loginWithInvalidCredentials= new LoginWithInvalidCredentials();
@@ -87,7 +96,7 @@ public class TestApp extends BasePage {
         Assert.assertTrue(isElementVisible(loginWithInvalidCredentials.errorMessageLogin));
     }
 
-    @Test(priority = 6, groups="BAT")
+    @Test(priority = 7, groups="BAT")
     public void testAddItemToCart(){
        AddItemPage addItemPage=new AddItemPage();
 
@@ -103,7 +112,7 @@ public class TestApp extends BasePage {
 
     }
 
-    @Test(priority = 7, groups = {"BAT"})
+    @Test(priority = 8, groups = {"BAT"})
     public void addModifyRemoveFromCartData() {
         Homepage homepage = new Homepage();
         homepage.doSearch("Duffle Bag");
@@ -114,7 +123,7 @@ public class TestApp extends BasePage {
         Assert.assertTrue(isElementVisible(addModifyRemove.noItemsInCart));
 
     }
-    @Test(priority = 8, groups = {"BAT"})
+    @Test(priority = 9, groups = {"BAT"})
 
     public void testCategoryResult() {
         Homepage homepage = new Homepage();
