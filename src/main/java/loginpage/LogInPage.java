@@ -20,7 +20,7 @@ public class LogInPage extends BasePage {
      public WebElement resultLoginMessage;
 
 
-    public LogInPage(){
+    public  LogInPage(){
         PageFactory.initElements(driver,this);
     }
 

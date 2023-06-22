@@ -29,6 +29,13 @@ public class Homepage extends BasePage {
     @FindBy(xpath = "//div[@class='filter-current']//li[@class='item']")
     public WebElement categoryJacketResult;
 
+    @FindBy(xpath = "//input[@id='newsletter']")
+    public WebElement inputValidEmailField;
+    @FindBy(xpath = "//span[.='Subscribe']")
+    public WebElement subscribeButton;
+    @FindBy(xpath="//div[@data-bind='html: $parent.prepareMessageForHtml(message.text)']")
+    public WebElement confirmSubscriptionMessage;
+
 
     public Homepage(){
 
@@ -55,6 +62,18 @@ public class Homepage extends BasePage {
     }
     public void clickOnJacketsButton(){
         safeClickOnElement(jacketButton);
+    }
+
+
+    public void getInputEmail(String email){
+        sendKeysToElement(inputValidEmailField, email);
+    }
+    public void clickOnSubscribeButton(){
+        safeClickOnElement(subscribeButton);
+    }
+    public void DoSubscribe(String email){
+      sendKeysToElement(inputValidEmailField,email);
+      safeClickOnElement(subscribeButton);
     }
 
     public void doFilterTo(){

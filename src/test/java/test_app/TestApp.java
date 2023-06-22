@@ -6,6 +6,7 @@ import addremovemodifyfromcartpage.AddModifyCartPage;
 import app.pom.homepage.Homepage;
 import app.resultpage.SearchResultPage;
 import base.BasePage;
+import contactuspage.ContactUsPage;
 import loginpage.LogInPage;
 import loginwithinvalidcredentials.LoginWithInvalidCredentials;
 import org.openqa.selenium.By;
@@ -132,5 +133,25 @@ public class TestApp extends BasePage {
 
     }
 
+    @Test(priority = 10 , groups = {"BAT"})
+    public void testSubscribe(){
+        Homepage homepage= new Homepage();
+        String email="connie.smith@gmail.com";
+        homepage.DoSubscribe(email);
+
+Assert.assertTrue(isElementVisible(homepage.confirmSubscriptionMessage));
+    }
+
+    @Test(priority = 11 , groups = {"BAT"})
+    public void testContactUs(){
+        ContactUsPage contactUsPage= new ContactUsPage();
+        String name= "Dalal";
+        String email="connie.smith@gmail.com";
+        String phoneNumber= "2675287485";
+        String comment= "We go the best teacher ";
+        contactUsPage.doContactUs(name,email,phoneNumber,comment);
+
+        Assert.assertTrue(isElementVisible(contactUsPage.thankYouForContactingUsMessage));
+    }
 
 }
