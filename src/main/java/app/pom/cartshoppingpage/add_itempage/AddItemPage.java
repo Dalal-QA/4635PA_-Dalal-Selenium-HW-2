@@ -1,12 +1,11 @@
-package app.pom.remove_itempage;
+package app.pom.cartshoppingpage.add_itempage;
 
 import base.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class RemoveItemPage extends BasePage {
-
+public class AddItemPage extends BasePage {
 
     @FindBy(xpath = "//input[@id='search']")
     public WebElement inputSearchBar;
@@ -18,27 +17,20 @@ public class RemoveItemPage extends BasePage {
     public WebElement wantedItem;
 
 
-    @FindBy(id="option-label-size-143-item-167")
-    public WebElement sizeBox;
+   @FindBy(id="option-label-size-143-item-167")
+   public WebElement sizeBox;
 
-    @FindBy(id= "option-label-color-93-item-50")
-    WebElement colorBox;
+   @FindBy(id= "option-label-color-93-item-50")
+   WebElement colorBox;
 
-    @FindBy(id="product-addtocart-button")
-    WebElement addToCartButton;
+   @FindBy(id="product-addtocart-button")
+   WebElement addToCartButton;
 
-    @FindBy(xpath = "//a[@class='action showcart']")
-    WebElement numberOfItemInCart;
-
-    @FindBy(xpath = "//*[@id=\"mini-cart\"]/li/div/div/div[3]/div[2]/a")
-    WebElement removeItemIcon;
-    @FindBy(xpath = "/html/body/div[3]/aside[2]/div[2]/footer/button[2]")
-    WebElement okRemoveItemButton;
-    @FindBy(xpath = "//*[@id=\"minicart-content-wrapper\"]/div[2]/strong")
-    WebElement removedItemResultText;
-
-    public RemoveItemPage(){
+   @FindBy(xpath = "//div[@class='message-success success message']/div[contains(.,'You added Hera Pullover Hoodie to your shopping cart.')]")
+   WebElement testResult;
+    public AddItemPage(){
         PageFactory.initElements(driver,this);
+
 
     }
 
@@ -63,30 +55,15 @@ public class RemoveItemPage extends BasePage {
         safeClickOnElement(addToCartButton);
     }
 
-    public void clickOnNumberOfItemInCart(){
-        safeClickOnElement(numberOfItemInCart);
-
-    }
-
-    public void clickOnRemoveItemIcon(){
-        safeClickOnElement(removeItemIcon);
-    }
-    public void clickOnOkRemoveItem(){
-        safeClickOnElement(okRemoveItemButton);
-    }
-
-    public void removeItemFromCart(String searchTerm) {
+    public void addItemToTheCart(String searchTerm){
         inputSearchTerm(searchTerm);
         clickActionSearchButton();
         clickOnTheItem();
         selectYourSize();
         selectAColor();
         clickOnAddToCartButton();
-        clickOnNumberOfItemInCart();
-        clickOnRemoveItemIcon();
-        clickOnOkRemoveItem();
-
-    }
 
 
     }
+
+}

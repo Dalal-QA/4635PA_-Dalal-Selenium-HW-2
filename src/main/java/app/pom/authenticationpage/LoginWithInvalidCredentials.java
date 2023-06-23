@@ -1,4 +1,4 @@
-package app.pom.loginwithinvalidcredentials;
+package app.pom.authenticationpage;
 
 import base.BasePage;
 import org.openqa.selenium.WebElement;

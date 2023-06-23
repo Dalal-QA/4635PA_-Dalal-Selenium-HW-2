@@ -1,4 +1,4 @@
-package app.pom.loginpage;
+package app.pom.authenticationpage;
 
 import base.BasePage;
 import org.openqa.selenium.WebElement;

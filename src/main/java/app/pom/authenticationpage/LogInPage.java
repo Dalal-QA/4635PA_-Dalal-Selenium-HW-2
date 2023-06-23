@@ -1,5 +1,6 @@
-package app.pom.loginpage;
+package app.pom.authenticationpage;
 
+import app.pom.homepage.Homepage;
 import base.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -37,12 +38,12 @@ public class LogInPage extends BasePage {
         safeClickOnElement(loginButton);
     }
 
-    public WelcomeLoginPage getLogIn(String validEmail, String validPassword){
+    public Homepage getLogIn(String validEmail, String validPassword){
         clickLoginLink();
         setInputEmail(validEmail);
         setInputPassword(validPassword);
         clickLoginButton();
-        return new WelcomeLoginPage();
+        return new Homepage();
     }
 
 }

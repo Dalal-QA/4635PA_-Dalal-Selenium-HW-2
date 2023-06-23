@@ -1,4 +1,4 @@
-package app.pom.add_itempage;
+package app.pom.cartshoppingpage.add_itempage;
 
 import base.BasePage;
 import org.openqa.selenium.WebElement;

@@ -17,6 +17,14 @@
         <!--        </groups>-->
         <classes>
             <class name="test_app.TestApp"/>
+            <class name="test_search.TestSearch"/>
+            <class name="test_registration.TestCreateAccount"/>
+            <class name="test_authentication.TestAuthentication"/>
+            <class name="test_shoppingcart.TestShoppingCart"/>
+            <class name="test_filtertheresult.TestFilterTheResult"/>
+            <class name="test_subscribe.TestSubscribe"/>
+            <class name="test_contactus.TestContactUs"/>
+
         </classes>
     </test>
 
