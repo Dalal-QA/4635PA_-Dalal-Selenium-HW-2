@@ -1,4 +1,4 @@
-package remove_itempage;
+package app.pom.remove_itempage;
 
 import base.BasePage;
 import org.openqa.selenium.WebElement;

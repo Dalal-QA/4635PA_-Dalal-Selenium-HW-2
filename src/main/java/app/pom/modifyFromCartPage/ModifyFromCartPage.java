@@ -1,7 +1,7 @@
-package modifyFromCartPage;
+package app.pom.modifyFromCartPage;
 
 import base.BasePage;
-import loginpage.WelcomeLoginPage;
+import app.pom.loginpage.WelcomeLoginPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;

@@ -1,4 +1,4 @@
-package app.resultpage;
+package app.pom.resultpage;
 
 import base.BasePage;
 import org.openqa.selenium.By;

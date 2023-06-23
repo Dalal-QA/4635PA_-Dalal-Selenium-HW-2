@@ -1,4 +1,4 @@
-package addremovemodifyfromcartpage;
+package app.pom.addremovemodifyfromcartpage;
 
 import base.BasePage;
 import org.openqa.selenium.WebElement;

@@ -1,4 +1,4 @@
-package contactuspage;
+package app.pom.contactuspage;
 
 import base.BasePage;
 import org.openqa.selenium.WebElement;

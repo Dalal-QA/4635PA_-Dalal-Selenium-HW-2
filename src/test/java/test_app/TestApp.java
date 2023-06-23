@@ -1,18 +1,18 @@
 package test_app;
 
-import add_itempage.AddItemPage;
-import add_itempage.AddedItemPage;
-import addremovemodifyfromcartpage.AddModifyCartPage;
+import app.pom.add_itempage.AddItemPage;
+import app.pom.add_itempage.AddedItemPage;
+import app.pom.addremovemodifyfromcartpage.AddModifyCartPage;
 import app.pom.homepage.Homepage;
-import app.resultpage.SearchResultPage;
+import app.pom.resultpage.SearchResultPage;
 import base.BasePage;
-import contactuspage.ContactUsPage;
-import loginpage.LogInPage;
-import loginwithinvalidcredentials.LoginWithInvalidCredentials;
+import app.pom.contactuspage.ContactUsPage;
+import app.pom.loginpage.LogInPage;
+import app.pom.loginwithinvalidcredentials.LoginWithInvalidCredentials;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import registrationpage.RegistrationPage;
+import app.pom.registrationpage.RegistrationPage;
 
 public class TestApp extends BasePage {
 

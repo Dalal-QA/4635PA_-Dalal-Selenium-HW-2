@@ -1,4 +1,4 @@
-package checkoutpage;
+package app.pom.checkoutpage;
 
 import base.BasePage;
 import org.openqa.selenium.WebElement;
