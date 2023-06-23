@@ -2,6 +2,7 @@ package test_authentication;
 
 import app.pom.authenticationpage.LogInPage;
 import app.pom.authenticationpage.LoginWithInvalidCredentials;
+import app.pom.homepage.Homepage;
 import base.BasePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -28,5 +29,16 @@ public class TestAuthentication extends BasePage {
         String invalidPassword = "Ayden1213";
         loginWithInvalidCredentials.getLogIn(invalidEmail, invalidPassword);
         Assert.assertTrue(isElementVisible(loginWithInvalidCredentials.errorMessageLogin));
+    }
+
+    @Test(priority = 7, groups = {"BAT"})
+    public void testLog(){
+        LogInPage logInPage = new LogInPage();
+        String validEmail = "connie.smith@gmail.com";
+        String validPassword = "AydenLiam1213";
+        logInPage.getLogIn(validEmail, validPassword);
+        Homepage homepage= new Homepage();
+        homepage.doLogOut();
+        Assert.assertTrue(isElementVisible(homepage.messageLogOut));
     }
 }

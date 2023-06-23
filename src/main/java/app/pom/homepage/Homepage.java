@@ -37,18 +37,29 @@ public class Homepage extends BasePage {
     public WebElement confirmSubscriptionMessage;
 
 
-    public Homepage(){
+    @FindBy(xpath = "//div[@class='panel header']//button[@class='action switch']")
+    public WebElement myNameDropDown;
+    @FindBy(xpath="//li[@class='customer-welcome active']//a[contains(.,'Sign Out')]")
+    public WebElement logOutButton;
+    @FindBy(xpath = "//span[@class='base']")
+    public WebElement messageLogOut;
 
+
+    public Homepage(){
         PageFactory.initElements(driver, this);
     }
 // single responsibility methods
     public void inputSearchTerm(String searchTerm){
-
         clearSendKeysToElement(inputSearchBar,searchTerm);
     }
     public void clickActionSearchButton(){
-
         safeClickOnElement(buttonActionSearch);
+    }
+
+    public SearchResultPage doSearch(String searchTerm){
+        inputSearchTerm(searchTerm);
+        clickActionSearchButton();
+        return new SearchResultPage();
     }
 
     public void clickOnWomenButton(){
@@ -64,18 +75,6 @@ public class Homepage extends BasePage {
         safeClickOnElement(jacketButton);
     }
 
-
-    public void getInputEmail(String email){
-        sendKeysToElement(inputValidEmailField, email);
-    }
-    public void clickOnSubscribeButton(){
-        safeClickOnElement(subscribeButton);
-    }
-    public void DoSubscribe(String email){
-      sendKeysToElement(inputValidEmailField,email);
-      safeClickOnElement(subscribeButton);
-    }
-
     public void doFilterTo(){
         clickOnWomenButton();
         clickOnTopsButton();
@@ -84,11 +83,37 @@ public class Homepage extends BasePage {
 
     }
 
-//Work flow method
-    public SearchResultPage doSearch(String searchTerm){
-        inputSearchTerm(searchTerm);
-        clickActionSearchButton();
-   return new SearchResultPage();
+
+    public void getInputEmail(String email){
+        sendKeysToElement(inputValidEmailField, email);
     }
+    public void clickOnSubscribeButton(){
+        safeClickOnElement(subscribeButton);
+    }
+
+    public void DoSubscribe(String email){
+        getInputEmail(email);
+        clickOnSubscribeButton();
+    }
+
+
+    public void clickOnMyNameDropDown(){
+        safeClickOnElement(myNameDropDown);
+    }
+    public void clickOnLogOutButton(){
+        safeClickOnElement(logOutButton);
+    }
+    public void doLogOut(){
+        clickOnMyNameDropDown();
+        clickOnLogOutButton();
+
+    }
+
+
+
+
+
+
+
 
 }

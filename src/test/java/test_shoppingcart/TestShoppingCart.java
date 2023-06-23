@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 public class TestShoppingCart extends BasePage {
 
-    @Test(priority = 7, groups="BAT")
+    @Test(priority = 8, groups="BAT")
     public void testAddItemToCart(){
         AddItemPage addItemPage=new AddItemPage();
 
@@ -27,7 +27,7 @@ public class TestShoppingCart extends BasePage {
 
     }
 
-    @Test(priority = 8, groups = {"BAT"})
+    @Test(priority = 9, groups = {"BAT"})
     public void addModifyRemoveFromCartData() {
         Homepage homepage = new Homepage();
         homepage.doSearch("Duffle Bag");

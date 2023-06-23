@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class TestContactUs extends BasePage {
 
-    @Test(priority = 11 , groups = {"BAT"})
+    @Test(priority = 12 , groups = {"BAT"})
     public void testContactUs(){
         ContactUsPage contactUsPage= new ContactUsPage();
         String name= "Dalal";

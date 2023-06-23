@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class TestFilterTheResult extends BasePage {
 
-    @Test(priority = 9, groups = {"BAT"})
+    @Test(priority = 10, groups = {"BAT"})
 
     public void testCategoryResult() {
         Homepage homepage = new Homepage();

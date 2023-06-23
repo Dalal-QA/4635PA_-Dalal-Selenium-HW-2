@@ -15,7 +15,7 @@ public class TestCreateAccount extends BasePage {
 
         String firstName= "Nancy";
         String lastName ="Blando";
-        String email="nancy.blandino@gmail.com";
+        String email="nancy.blandino1@gmail.com";
         String password="Liam@#Ayden125";
 
         registrationPage.doRegistration(firstName,lastName,email,password);
